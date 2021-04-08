@@ -1,0 +1,19 @@
+.link
+{
+    &:hover
+    {
+        @apply underline cursor-pointer;
+    }
+
+    &--primary
+    {
+        @apply text-theme-primary;
+
+
+    }
+
+    &--black
+    {
+        @apply text-black-base;
+    }
+}

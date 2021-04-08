@@ -1,0 +1,24 @@
+table
+{
+    @apply w-full ;
+
+    th, td
+    {
+        @apply m-0 text-left;
+    }
+
+    .header--action
+    {
+        @apply hidden;
+    }
+
+    .header--hide
+    {
+        @apply hidden;
+    }
+
+    .row--action
+    {
+        @apply w-1/4 py-2;
+    }
+}

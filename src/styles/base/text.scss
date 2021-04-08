@@ -1,0 +1,50 @@
+@layer base
+{
+	h1
+	{
+		@apply text-3xl font-medium dark:text-white-base;
+	}
+
+	h2
+	{
+		@apply text-2xl font-medium dark:text-white-base;
+	}
+
+	h3
+	{
+		@apply text-xl font-medium dark:text-white-base;
+	}
+
+	h4
+	{
+		@apply text-lg font-medium dark:text-white-base;
+	}
+
+	p
+	{
+		@apply text-base font-medium dark:text-white-base;
+	}
+}
+
+.text
+{
+	&--light
+	{
+		font-weight: 500;
+	}
+
+	&--bold
+	{
+		font-weight: 600;
+	}
+
+	&--extra-bold
+	{
+		font-weight: 700;
+	}
+
+	&--heavy
+	{
+		font-weight: 900;
+	}
+}

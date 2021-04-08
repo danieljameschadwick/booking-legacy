@@ -1,0 +1,49 @@
+.modal-overlay
+{
+    @apply absolute h-screen w-full inset-0 bg-black-base bg-opacity-50 flex justify-center items-center overflow-y-hidden;
+
+    .hidden
+    {
+        @apply bg-opacity-0;
+    }
+
+    .close-icon
+    {
+        @apply absolute cursor-pointer z-50 top-5 right-5 sm:right-10 w-10 fill-current text-black-base dark:text-white-base;
+    }
+
+    .modal-content
+    {
+        @apply relative w-full h-full overflow-y-scroll inset-0;
+    }
+
+    .darken-overlay
+    {
+        @apply absolute h-full w-full bg-black-base bg-opacity-50;
+
+        &.z-index-20
+        {
+            @apply z-20;
+        }
+
+        &.z-index-30
+        {
+            @apply z-30;
+        }
+
+        &.z-index-40
+        {
+            @apply z-40;
+        }
+    }
+
+    .modal
+    {
+        @apply absolute inset-0 mx-auto top-8 p-5 rounded-xl xl:mx-auto bg-white-base dark:bg-gray-dark dark:text-white-base;
+
+        .heading
+        {
+            @apply mb-2;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.form-group
+{
+    @apply text-black-base dark:text-white-base mb-3;
+}
+
+.form-row
+{
+    @apply w-full flex mb-1;
+}
+
+label
+{
+    @apply mr-1;
+}
+
+.input
+{
+    @apply text-black-base;
+}
+
+select
+{
+    @apply py-2 px-1 rounded-sm;
+}

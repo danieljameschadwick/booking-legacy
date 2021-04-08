@@ -1,0 +1,15 @@
+html,
+body
+{
+	@apply h-screen bg-white-base overflow-x-hidden dark:bg-black-medium;
+}
+
+.root
+{
+	@apply relative;
+}
+
+.container
+{
+	@apply mx-auto px-3 max-w-page;
+}

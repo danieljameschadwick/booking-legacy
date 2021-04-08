@@ -1,0 +1,47 @@
+.userbar
+{
+	@apply bg-theme-primarydark h-5 w-full flex;
+
+	.navbar-end
+	{
+		@apply text-xs;
+	}
+}
+
+.header
+{
+	@apply bg-theme-primary dark:text-black-base h-10 w-full mb-5 flex;
+}
+
+.navbar
+{
+	.container
+	{
+		@apply flex;
+	}
+
+	.navbar-brand
+	{
+		@apply flex-1 text-black-base mr-3 self-center text-lg font-medium;
+
+		&:hover
+		{
+			@apply no-underline;
+		}
+	}
+
+	.navbar-end
+	{
+		@apply mr-2 text-black-base self-center flex;
+
+		a
+		{
+			@apply mr-3;
+
+			&:last-of-type
+			{
+				@apply mr-0;
+			}
+		}
+	}
+}

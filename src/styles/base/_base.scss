@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'buttons';
+@import 'form';
+@import 'layout';
+@import 'links';
+@import 'overlay';
+@import 'table';
+@import 'text';
+
+@import '../components/components';
