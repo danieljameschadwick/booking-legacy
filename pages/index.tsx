@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../src/components/layout/Layout";
+import Layout from "../src/components/layout/Layout";
 
 const Index = () => {
     return (
         <Layout>
             <Head>
-                <title>{siteTitle}</title>
+                <title>{process.env.NEXT_PUBLIC_META_NAME}</title>
             </Head>
 
             <div className={"container"}>

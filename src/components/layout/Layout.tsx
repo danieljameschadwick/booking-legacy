@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Header from "../header/Header";
 
-export const siteTitle = "Ecommerce";
+export const siteTitle = process.env.NEXT_PUBLIC_META_NAME;
+export const metaDescription = process.env.NEXT_PUBLIC_META_DESCRIPTION;
 
 const Layout = ({ children }) => {
     return (
@@ -11,7 +12,7 @@ const Layout = ({ children }) => {
 
                 <meta
                     name="description"
-                    content="Ecommerce written in React, NextJS, Tailwind and (some) TypeScript."
+                    content={metaDescription}
                 />
                 <meta name="og:title" content={siteTitle} />
             </Head>
