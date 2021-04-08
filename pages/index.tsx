@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "../src/components/layout/Layout";
+import { AppointmentForm } from "../src/components/appointment/AppointmentForm";
 
 const Index = () => {
     return (
@@ -9,7 +10,7 @@ const Index = () => {
             </Head>
 
             <div className={"container"}>
-                
+                <AppointmentForm />
             </div>
         </Layout>
     )

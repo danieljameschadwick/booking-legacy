@@ -3,6 +3,7 @@ import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { createWrapper } from "next-redux-wrapper";
 import BookingTransform from "./BookingTransform";
+import { BookingReducer } from "./BookingReducer";
 
 const persistConfig = {
     key: "root",
@@ -11,7 +12,7 @@ const persistConfig = {
 };
 
 const Reducer = combineReducers({
-    booking: BookingTransform,
+    booking: BookingReducer,
 });
 
 const makeStore = ({ isServer }) => {
@@ -19,9 +20,7 @@ const makeStore = ({ isServer }) => {
         return createStore(Reducer);
     }
 
-    const { persistStore, persistReducer } = require("redux-persist");
     const persistedReducer = persistReducer(persistConfig, Reducer);
-
     const store = createStore(
         persistedReducer,
     );
