@@ -1,0 +1,9 @@
+.booking-container
+{
+    @apply w-full;
+
+    @media screen and (min-width: 400px)
+    {
+        @apply max-w-400;
+    }
+}

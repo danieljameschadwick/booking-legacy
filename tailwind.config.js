@@ -86,9 +86,7 @@ module.exports = {
             },
             maxWidth: {
                 '100': '100px',
-                '150': '150px',
-                '200': '200px',
-                '300': '300px',
+                '400': '400px',
                 'page': '1400px',
             },
             zIndex: {

@@ -9,7 +9,7 @@ const Index = () => {
                 <title>{process.env.NEXT_PUBLIC_META_NAME}</title>
             </Head>
 
-            <div className={"container"}>
+            <div className={"container booking-container"}>
                 <AppointmentForm />
             </div>
         </Layout>

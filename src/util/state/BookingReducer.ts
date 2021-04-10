@@ -22,11 +22,12 @@ export const BookingReducer = (state = initialState, action) => {
 
         case ACTION.BOOK:
             // @TODO: persist booking, will need to communicate with server at some point
-            const { firstName, lastName, dateTime } = action.payload;
+            const { firstName, lastName, email, dateTime } = action.payload;
 
             return {
                 firstName,
                 lastName,
+                email,
                 dateTime,
             };
     }
