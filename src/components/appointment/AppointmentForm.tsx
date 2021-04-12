@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import { ACTION } from "../../util/state/Action";
 import { DateTimePicker } from "./DateTimePicker";
+import { Error } from "../util/form/Error";
 import { SubmitButton } from "../util/buttons/SubmitButton";
 import dayjs, { Dayjs } from "dayjs";
 
@@ -20,7 +21,7 @@ interface IBooking {
     dateTime: Dayjs;
 };
 
-export const AppointmentForm = () => {
+export const AppointmentForm: React.FC = () => {
     const dispatch = useDispatch();
     const booking: IBooking = useSelector(state => state.booking);
 
@@ -52,28 +53,34 @@ export const AppointmentForm = () => {
         >
             {({ values, handleSubmit, setFieldValue }) => (
                 <Form>
-                    <div className={"form-group form-row"}>
-                        <div className={"form-group w-1/2"}>
+                    <div className={"form-row flex items-start"}>
+                        <div className={"form-group w-1/2 pr-1"}>
+                            <label>First Name:</label>
+
                             <Field
                                 name={"firstName"}
                                 className={"input"}
                             />
 
-                            <ErrorMessage name={"firstName"} />
+                            <Error name={"firstName"} />
                         </div>
                         
 
-                        <div className={"form-group w-1/2"}>
+                        <div className={"form-group w-1/2 pl-1"}>
+                            <label>Last Name:</label>
+
                             <Field
                                 name={"lastName"}
                                 className={"input"}
                             />
 
-                            <ErrorMessage name={"lastName"} />
+                            <Error name={"lastName"} />
                         </div>
                     </div>
 
-                    <div className={"form-row"}>
+                    <div className={"form-group form-row"}>
+                        <label>Email:</label>
+
                         <Field 
                             name={"email"} 
                             className={"input"}
@@ -81,19 +88,17 @@ export const AppointmentForm = () => {
                     </div>
 
                     <div className={"form-group"}>
-                       <ErrorMessage name={"email"} />
+                        <Error name={"email"} />
                     </div>
 
-                    <div className={"form-group"}>
-                        <DateTimePicker
-                            name="dateTime"
-                            date={values.dateTime}
-                            onChange={setFieldValue}
-                        />
-                    </div>
+                    <DateTimePicker
+                        name="dateTime"
+                        date={values.dateTime}
+                        onChange={setFieldValue}
+                    />
 
                     <div className={"form-group"}>
-                        <ErrorMessage name={"dateTime"} />
+                        <Error name={"dateTime"} />
                     </div>
 
                     <div className={"hidden"}>

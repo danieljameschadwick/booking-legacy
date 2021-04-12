@@ -1,11 +1,21 @@
 .form-group
 {
-    @apply text-black-base dark:text-white-base mb-3;
+    @apply text-black-base dark:text-white-base mb-3 flex flex-wrap;
+
+    label
+    {
+        @apply w-full h-6;
+    }
+
+    .input
+    {
+        @apply w-full;
+    }
 }
 
 .form-row
 {
-    @apply w-full flex mb-1;
+    @apply w-full;
 }
 
 label
@@ -15,7 +25,7 @@ label
 
 .input
 {
-    @apply text-black-base w-full;
+    @apply text-black-base w-full h-8;
 }
 
 select

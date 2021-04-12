@@ -94,7 +94,7 @@ module.exports = {
                 content: 5,
                 overlay: 100,
                 absolute: 1000,
-            }
+            },
         },
     },
     variants: {},

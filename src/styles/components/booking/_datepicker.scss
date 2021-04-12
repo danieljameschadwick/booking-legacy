@@ -1,0 +1,32 @@
+.datepicker
+{
+    @apply w-full;
+
+    .react-datepicker__triangle
+    {
+        @apply left-0;
+    }
+
+    .react-datepicker__navigation--next
+    {
+        @apply right-0;
+    }
+
+    .react-datepicker__month-container
+    {
+        @apply w-full block;
+    }
+
+    .react-datepicker__time-container
+    {
+        @apply w-full block;
+    }
+
+    .react-datepicker__time
+    {
+        .react-datepicker__time-box
+        {
+            @apply w-full;
+        }
+    }
+}

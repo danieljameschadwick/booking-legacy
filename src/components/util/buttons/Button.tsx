@@ -5,7 +5,7 @@ type IProps = {
     type?: string;
 };
 
-export const Button = ({text, additionalClassName, onClick, type}: IProps) => {
+export const Button: React.FC = ({text, additionalClassName, onClick, type}: IProps) => {
     return (
         <button onClick={onClick} className={`button ${additionalClassName ?? ''}`} type={type !== undefined ? type : ''}>
             {text}
